@@ -13,7 +13,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func onFetchClick(_ sender: Any) {
         Task{
-            print(try await WebClientService.fetchData())
+            let tempdata = try await WebClientService.fetchData()
+            TestData = []
+            tempdata.breedList.map({ element in
+                TestData.append(element.name)
+            })
+            TestData.sort()
+            table.reloadData()
         }
     }
     

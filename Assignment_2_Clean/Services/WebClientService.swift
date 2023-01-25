@@ -19,14 +19,16 @@ class WebClientService{
     
     static var client = WebClientService()
     
-    static func fetchData() async throws -> Any{
+    static func fetchData() async throws->AllBreedResponse{ //-> Dog?{
         guard
-        let url = URL(string: url)
+            let url = URL(string: url)
         else{
             throw WebError.NoWebSiteAccess
         }
+        
         let (data, response) = try await URLSession.shared.data(from: url)
-        let jsonObject  = try? JSONSerialization.jsonObject(with: data)
-        return jsonObject
+        
+        let decoder = try JSONDecoder().decode(AllBreedResponse.self, from: data)
+        return decoder
     }
 }

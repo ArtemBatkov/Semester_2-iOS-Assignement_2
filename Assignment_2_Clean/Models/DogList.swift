@@ -7,9 +7,9 @@
 
 import Foundation
 class DogList{
-    private var dogs = [Dog]()
+   // private var dogs = [Dog]()
     
-    func AddDog(_dog: Dog){
-        self.dogs.append(_dog)
-    }
+//    func AddDog(_dog: Dog){
+//        self.dogs.append(_dog)
+//    }
 }
