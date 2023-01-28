@@ -35,12 +35,13 @@ import Foundation
 struct Breed: Decodable{
     let name: String
     let subBreeds: [String]
+    //var image: String? = nil
 }
 
 //Model to define the JSON result
 struct AllBreedResponse: Decodable{
-     let breedList: [Breed]
-    private let status: String
+     var breedList: [Breed]
+     var status: String
     
      enum CodingKeys: String, CodingKey{
         case breedList = "message"
@@ -51,6 +52,8 @@ struct AllBreedResponse: Decodable{
         return breedList
     }
 }
+
+
 
 //Extension to implement the customization of JSON parsin
 extension AllBreedResponse{
@@ -67,17 +70,19 @@ extension AllBreedResponse{
         
         //3. Finish the initialization
         self.status = status
-        self.breedList = allBreeds.map({key, values in
+        
+        //create array
+        self.breedList = allBreeds.map({
+            (key, values) -> Breed in
             Breed(name: key, subBreeds: values)
         })
-        BreedList = self.breedList
-        //print(breedList)
-         
+        
+                 
     }
+         
 }
 
-private  var BreedList = [Breed]()
 
-func getBreedList()->[Breed]{
-    return BreedList
-}
+
+
+

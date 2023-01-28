@@ -31,4 +31,29 @@ class WebClientService{
         let decoder = try JSONDecoder().decode(AllBreedResponse.self, from: data)
         return decoder
     }
+    
+//    static func fetchImage(BreedName: String) async throws -> String{
+//        guard
+//            let url = URL(string: "https://dog.ceo/api/breed/\(BreedName)/images/random")
+//        else{
+//            throw WebError.NoWebSiteAccess
+//        }
+//        let (data, response) = try await URLSession.shared.data(from: url)
+//        let json = try JSONSerialization.jsonObject(with: data) as? [String: String]
+//        var image_as_string = ""
+//        if(json?["status"] == "success"){
+//            return (json?["message"])!
+//            //handle(json?["message"] ?? "")
+//        }
+//        return image_as_string
+//    }
+    static func fetchImage(BreedName: String) async throws -> Data{
+        guard
+            let url = URL(string: "https://dog.ceo/api/breed/\(BreedName)/images/random")
+        else{
+            throw WebError.NoWebSiteAccess
+        }
+        let (data, response) = try await URLSession.shared.data(from: url)
+        return data
+    }
 }

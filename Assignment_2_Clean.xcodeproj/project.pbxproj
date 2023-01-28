@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0FBE9F29835EC0003876D6 /* DogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FBE9E29835EC0003876D6 /* DogCell.swift */; };
 		1D122EB429802E9D006AFDE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D122EB329802E9D006AFDE9 /* AppDelegate.swift */; };
 		1D122EB629802E9D006AFDE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D122EB529802E9D006AFDE9 /* SceneDelegate.swift */; };
 		1D122EB829802E9D006AFDE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D122EB729802E9D006AFDE9 /* ViewController.swift */; };
 		1D122EBB29802E9D006AFDE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D122EB929802E9D006AFDE9 /* Main.storyboard */; };
 		1D122EBD29802E9E006AFDE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D122EBC29802E9E006AFDE9 /* Assets.xcassets */; };
 		1D122EC029802E9E006AFDE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D122EBE29802E9E006AFDE9 /* LaunchScreen.storyboard */; };
+		1D45E0392981F4770040CC4B /* dog_blank.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1D45E0382981F4770040CC4B /* dog_blank.svg */; };
 		1D9DDF3F2980384E00CABC0D /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DDF3E2980384E00CABC0D /* Dog.swift */; };
 		1D9DDF4129803AB600CABC0D /* DogList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DDF4029803AB600CABC0D /* DogList.swift */; };
 		1D9DDF4429803BFA00CABC0D /* WebClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DDF4329803BFA00CABC0D /* WebClientService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D0FBE9E29835EC0003876D6 /* DogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCell.swift; sourceTree = "<group>"; };
 		1D122EB029802E9D006AFDE9 /* Assignment_2_Clean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment_2_Clean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D122EB329802E9D006AFDE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D122EB529802E9D006AFDE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		1D122EBC29802E9E006AFDE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D122EBF29802E9E006AFDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D122EC129802E9E006AFDE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D45E0382981F4770040CC4B /* dog_blank.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = dog_blank.svg; path = ../../../../dog_blank.svg; sourceTree = "<group>"; };
 		1D9DDF3E2980384E00CABC0D /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		1D9DDF4029803AB600CABC0D /* DogList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogList.swift; sourceTree = "<group>"; };
 		1D9DDF4329803BFA00CABC0D /* WebClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebClientService.swift; sourceTree = "<group>"; };
@@ -43,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D0FBE9D29835E7A003876D6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1D0FBE9E29835EC0003876D6 /* DogCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		1D122EA729802E9D006AFDE9 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +74,7 @@
 		1D122EB229802E9D006AFDE9 /* Assignment_2_Clean */ = {
 			isa = PBXGroup;
 			children = (
+				1D0FBE9D29835E7A003876D6 /* Cells */,
 				1D9DDF4229803B3700CABC0D /* Services */,
 				1D9DDF3D2980383000CABC0D /* Models */,
 				1D122EB329802E9D006AFDE9 /* AppDelegate.swift */,
@@ -69,6 +82,7 @@
 				1D122EB729802E9D006AFDE9 /* ViewController.swift */,
 				1D122EB929802E9D006AFDE9 /* Main.storyboard */,
 				1D122EBC29802E9E006AFDE9 /* Assets.xcassets */,
+				1D45E0382981F4770040CC4B /* dog_blank.svg */,
 				1D122EBE29802E9E006AFDE9 /* LaunchScreen.storyboard */,
 				1D122EC129802E9E006AFDE9 /* Info.plist */,
 			);
@@ -150,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D45E0392981F4770040CC4B /* dog_blank.svg in Resources */,
 				1D122EC029802E9E006AFDE9 /* LaunchScreen.storyboard in Resources */,
 				1D122EBD29802E9E006AFDE9 /* Assets.xcassets in Resources */,
 				1D122EBB29802E9D006AFDE9 /* Main.storyboard in Resources */,
@@ -168,6 +183,7 @@
 				1D122EB829802E9D006AFDE9 /* ViewController.swift in Sources */,
 				1D122EB429802E9D006AFDE9 /* AppDelegate.swift in Sources */,
 				1D9DDF3F2980384E00CABC0D /* Dog.swift in Sources */,
+				1D0FBE9F29835EC0003876D6 /* DogCell.swift in Sources */,
 				1D122EB629802E9D006AFDE9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
