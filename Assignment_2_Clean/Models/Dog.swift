@@ -35,7 +35,7 @@ import Foundation
 struct Breed: Decodable{
     let name: String
     let subBreeds: [String]
-    //var image: String? = nil
+    var image: Data? = nil
 }
 
 //Model to define the JSON result
@@ -74,7 +74,8 @@ extension AllBreedResponse{
         //create array
         self.breedList = allBreeds.map({
             (key, values) -> Breed in
-            Breed(name: key, subBreeds: values)
+            
+            Breed(name: key, subBreeds: values )
         })
         
                  

@@ -19,7 +19,7 @@ class DogCell: UITableViewCell {
     @IBOutlet weak var SubBreedLabel: UILabel!
     
    
-    @IBOutlet weak var DogImage: UIImageView!
+    
     
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -32,28 +32,63 @@ class WebClientService{
         return decoder
     }
     
-//    static func fetchImage(BreedName: String) async throws -> String{
-//        guard
-//            let url = URL(string: "https://dog.ceo/api/breed/\(BreedName)/images/random")
-//        else{
-//            throw WebError.NoWebSiteAccess
-//        }
-//        let (data, response) = try await URLSession.shared.data(from: url)
-//        let json = try JSONSerialization.jsonObject(with: data) as? [String: String]
-//        var image_as_string = ""
-//        if(json?["status"] == "success"){
-//            return (json?["message"])!
-//            //handle(json?["message"] ?? "")
-//        }
-//        return image_as_string
-//    }
+    
     static func fetchImage(BreedName: String) async throws -> Data{
+        var urlString = "https://dog.ceo/api/breed/\(BreedName)/images/random"
+        //print(urlString)
         guard
-            let url = URL(string: "https://dog.ceo/api/breed/\(BreedName)/images/random")
+            
+            let url = URL(string: urlString)
+                
         else{
             throw WebError.NoWebSiteAccess
         }
         let (data, response) = try await URLSession.shared.data(from: url)
+        
+        //fetch jpg url inside of the data
+        let json = try JSONSerialization.jsonObject(with: data) as? [String: String]
+        
+        if(IsSuccess(check: json)){
+            var true_data = try await fetchImageData(url: json!["message"]!)
+            return true_data
+        }
+        else{
+            throw WebError.NoWebSiteAccess
+        }
+    }
+    
+    private static func IsSuccess(check json: [String:String]?)->Bool{
+        var success = false
+        if (json != nil){
+            if (json!["status"] == "success") {
+                success = true
+                return success
+            }
+            else{
+                return success
+            }
+        }
+        else{
+            return success
+        }
+    }
+
+    private static func fetchImageData(url: String) async throws -> Data{
+        guard
+            let urlStringjpg = URL(string: url)
+        else{
+            throw WebError.NoWebSiteAccess}
+        print(urlStringjpg)
+        let(data,_) = try await URLSession.shared.data(from: urlStringjpg)
         return data
     }
+
+        
+        
+    
 }
+
+
+
+
+

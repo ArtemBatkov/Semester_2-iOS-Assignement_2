@@ -16,8 +16,8 @@
 		1D122EC029802E9E006AFDE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D122EBE29802E9E006AFDE9 /* LaunchScreen.storyboard */; };
 		1D45E0392981F4770040CC4B /* dog_blank.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1D45E0382981F4770040CC4B /* dog_blank.svg */; };
 		1D9DDF3F2980384E00CABC0D /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DDF3E2980384E00CABC0D /* Dog.swift */; };
-		1D9DDF4129803AB600CABC0D /* DogList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DDF4029803AB600CABC0D /* DogList.swift */; };
 		1D9DDF4429803BFA00CABC0D /* WebClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DDF4329803BFA00CABC0D /* WebClientService.swift */; };
+		1DA332352989640F00F243A3 /* DogImageSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA332342989640F00F243A3 /* DogImageSceneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 		1D122EC129802E9E006AFDE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D45E0382981F4770040CC4B /* dog_blank.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = dog_blank.svg; path = ../../../../dog_blank.svg; sourceTree = "<group>"; };
 		1D9DDF3E2980384E00CABC0D /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
-		1D9DDF4029803AB600CABC0D /* DogList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogList.swift; sourceTree = "<group>"; };
 		1D9DDF4329803BFA00CABC0D /* WebClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebClientService.swift; sourceTree = "<group>"; };
+		1DA332342989640F00F243A3 /* DogImageSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageSceneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,12 +74,12 @@
 		1D122EB229802E9D006AFDE9 /* Assignment_2_Clean */ = {
 			isa = PBXGroup;
 			children = (
+				1DA33233298963A500F243A3 /* ViewControllers */,
 				1D0FBE9D29835E7A003876D6 /* Cells */,
 				1D9DDF4229803B3700CABC0D /* Services */,
 				1D9DDF3D2980383000CABC0D /* Models */,
 				1D122EB329802E9D006AFDE9 /* AppDelegate.swift */,
 				1D122EB529802E9D006AFDE9 /* SceneDelegate.swift */,
-				1D122EB729802E9D006AFDE9 /* ViewController.swift */,
 				1D122EB929802E9D006AFDE9 /* Main.storyboard */,
 				1D122EBC29802E9E006AFDE9 /* Assets.xcassets */,
 				1D45E0382981F4770040CC4B /* dog_blank.svg */,
@@ -93,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				1D9DDF3E2980384E00CABC0D /* Dog.swift */,
-				1D9DDF4029803AB600CABC0D /* DogList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,6 +103,15 @@
 				1D9DDF4329803BFA00CABC0D /* WebClientService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1DA33233298963A500F243A3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D122EB729802E9D006AFDE9 /* ViewController.swift */,
+				1DA332342989640F00F243A3 /* DogImageSceneViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D9DDF4129803AB600CABC0D /* DogList.swift in Sources */,
 				1D9DDF4429803BFA00CABC0D /* WebClientService.swift in Sources */,
+				1DA332352989640F00F243A3 /* DogImageSceneViewController.swift in Sources */,
 				1D122EB829802E9D006AFDE9 /* ViewController.swift in Sources */,
 				1D122EB429802E9D006AFDE9 /* AppDelegate.swift in Sources */,
 				1D9DDF3F2980384E00CABC0D /* Dog.swift in Sources */,
